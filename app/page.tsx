@@ -1,5 +1,7 @@
+import { HeroSection } from "@/components/home";
+
 export default function Home() {
     return (
-        <h1 className="p-6 text-center text-2x bg-white min-h-screen text-black">JobsMint - Find Jobs here</h1>
+        <HeroSection /> 
     );
 }
