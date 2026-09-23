@@ -7,5 +7,3 @@ export default function Home() {
         </>
     );
 }
-
-// https://remotive.com/api/remote-jobs?limit=1
