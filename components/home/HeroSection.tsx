@@ -55,7 +55,7 @@ export default function HeroSection() {
                         />
                     </div>
 
-                    <button className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold transition hover:bg-blue-500">
+                    <button className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold transition hover:bg-blue-500 cursor-pointer">
                         <Search size={18} />
                         Search Jobs
                     </button>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                     {Skills.map((skill) => (
                             <button
                                 key={skill.id}
-                                className="rounded-full border border-slate-800 px-3 py-1.5 text-slate-400 transition hover:border-blue-500/50 hover:text-blue-400"
+                                className="rounded-full border border-slate-800 px-3 py-1.5 text-slate-400 transition hover:border-blue-500/50 hover:text-blue-400 cursor-pointer"
                             >
                                 {skill.name}
                             </button>
