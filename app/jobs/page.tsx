@@ -10,7 +10,7 @@ export default function JobsPage() {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/jobs');
+                const response = await fetch('/api/jobs');
 
                 const result = await response.json();
 
