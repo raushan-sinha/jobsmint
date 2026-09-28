@@ -89,7 +89,7 @@ export default function JobsPage() {
 
                                     <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
                                         <span className="font-medium text-slate-500">Salary</span>
-                                        <span className="font-bold text-indigo-600">{job.salary.trim() ? job.salary : 'NA'}</span>
+                                        <span className="font-bold text-indigo-600">{job.salary?.trim() ? job.salary : 'NA'}</span>
                                     </div>
                                 </div>
 
