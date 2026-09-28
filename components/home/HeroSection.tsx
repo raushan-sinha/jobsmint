@@ -40,6 +40,8 @@ export default function HeroSection() {
 
                         <input
                             type="text"
+                            id="skill"
+                            name="skill"
                             placeholder="Job title, skill or keyword"
                             className="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500"
                         />
@@ -50,6 +52,8 @@ export default function HeroSection() {
 
                         <input
                             type="text"
+                            id="location"
+                            name="location"
                             placeholder="Location"
                             className="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500"
                         />
