@@ -69,6 +69,10 @@ export default function JobsPage() {
 
                                 <div className="mt-6 flex-1 space-y-3 text-sm">
                                     <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+                                        <span className="text-xl font-semibold text-slate-900">{job.title}</span>
+                                    </div>
+
+                                    <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
                                         <span className="font-medium text-slate-500">Company</span>
                                         <span className="font-semibold text-slate-900">{job.company_name}</span>
                                     </div>
@@ -114,7 +118,7 @@ export default function JobsPage() {
                         </p>
                     </div>
                 )}
-                
+
             </div>
         </main>
     );
