@@ -15,7 +15,7 @@ export default function MobileNavbar() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-xl font-bold tracking-tight text-white"
+                    className="text-2xl font-bold tracking-tight text-white"
                 >
                     Skill<span className="text-cyan-400">Zen</span>
                 </Link>
