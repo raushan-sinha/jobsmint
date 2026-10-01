@@ -46,6 +46,7 @@ export default function MobileNavbar() {
                                     key={link.id}
                                     href={link.href}
                                     className="flex items-center rounded-xl border border-slate-800 bg-slate-800/60 px-4 py-3.5 text-sm font-medium text-slate-300 transition-all duration-200 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     {link.name}
                                 </Link>
