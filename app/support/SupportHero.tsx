@@ -62,7 +62,7 @@ export default function SupportHero() {
                                 {/* Search Button */}
                                 <button
                                     type="button"
-                                    className="hidden rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:block"
+                                    className="hidden rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:block cursor-pointer"
                                 >
                                     Search
                                 </button>
