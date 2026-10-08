@@ -1,44 +1,4 @@
-import {
-    BriefcaseBusiness,
-    FileText,
-    UserRound,
-    Building2,
-    Wrench,
-    CircleHelp,
-} from "lucide-react";
-
-const helpCategories = [
-    {
-        title: "Finding Jobs",
-        description: "Search and discover jobs that match your skills and interests.",
-        icon: BriefcaseBusiness,
-    },
-    {
-        title: "Job Applications",
-        description: "Get help with applying for jobs and understanding job listings.",
-        icon: FileText,
-    },
-    {
-        title: "Account & Login",
-        description: "Manage your account, profile, login, and signup issues.",
-        icon: UserRound,
-    },
-    {
-        title: "For Employers",
-        description: "Learn how to create and manage job postings on JobsMint.",
-        icon: Building2,
-    },
-    {
-        title: "Technical Support",
-        description: "Having trouble with the website? We're here to help.",
-        icon: Wrench,
-    },
-    {
-        title: "Other Questions",
-        description: "Can't find what you're looking for? Get additional help.",
-        icon: CircleHelp,
-    },
-];
+import { QuickHelpCategories } from "@/data/quickHelpSection.data";
 
 export default function QuickHelpSection() {
     return (
@@ -62,7 +22,7 @@ export default function QuickHelpSection() {
 
                 {/* Help Cards */}
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                    {helpCategories.map((category) => {
+                    {QuickHelpCategories.map((category) => {
                         const Icon = category.icon;
 
                         return (
@@ -86,7 +46,7 @@ export default function QuickHelpSection() {
                                 </p>
 
                                 {/* Link */}
-                                <div className="mt-5 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-700">
+                                <div className="mt-5 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-700 cursor-pointer">
                                     Get help →
                                 </div>
                             </button>
