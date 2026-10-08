@@ -7,7 +7,7 @@ export default function QuickHelpSection() {
 
                 {/* Section Header */}
                 <div className="mx-auto mb-12 max-w-2xl text-center">
-                    <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600">
+                    <p className="mb-3 text-sm lg:text-2xl font-semibold uppercase tracking-wider text-blue-600">
                         Quick Help
                     </p>
 
@@ -29,7 +29,7 @@ export default function QuickHelpSection() {
                             <button
                                 key={category.id}
                                 type="button"
-                                className="group rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+                                className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:from-blue-100 hover:to-indigo-100"
                             >
                                 {/* Icon */}
                                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
