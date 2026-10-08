@@ -27,7 +27,7 @@ export default function QuickHelpSection() {
 
                         return (
                             <button
-                                key={category.title}
+                                key={category.id}
                                 type="button"
                                 className="group rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
                             >
