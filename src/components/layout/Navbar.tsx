@@ -32,7 +32,7 @@ export default function Navbar() {
                 {/* Navigation Links */}
                 <div className="flex items-center gap-8">
                     {NavbarLinkData.map((link) => (
-                        <a key={link.id} href={link.href} className="text-base font-semibold text-black-600">
+                        <a key={link.id} href={link.href} className="relative text-base font-medium text-black transition-colors duration-200 hover:text-blue-600 after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-800 after:to-blue-600 after:transition-all after:duration-300 after:ease-out hover:after:w-full">
                             {link.name}
                         </a>
                     ))}
