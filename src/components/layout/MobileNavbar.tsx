@@ -1,4 +1,9 @@
+import { MenuIcon, X } from "lucide-react";
+import { useState } from "react";
+
 export default function MobileNavbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
     return (
         <header className="fixed left-1/2 top-[2%] z-50 w-[90%] -translate-x-1/2 lg:hidden">
             <nav className="flex h-[68px] items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-4 shadow-lg shadow-slate-200/50 backdrop-blur-xl sm:h-[76px] sm:px-6">
@@ -27,24 +32,18 @@ export default function MobileNavbar() {
                     </span>
                 </a>
 
-                {/* Menu Icon — UI only */}
+                {/* Menu/Cross Icon — UI only */}
                 <button
                     type="button"
                     aria-label="Open menu"
                     className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 sm:h-11 sm:w-11"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="23"
-                        height="23"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                    >
-                        <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                    {isMenuOpen ? (
+                        <X color="black" />
+                    ) : (
+                        <MenuIcon color="black" />
+                    )}
                 </button>
 
             </nav>
