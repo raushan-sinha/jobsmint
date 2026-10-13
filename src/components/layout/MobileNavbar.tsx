@@ -51,18 +51,40 @@ export default function MobileNavbar() {
                 {isMenuOpen && (
                     <div className="absolute left-0 right-0 top-full z-40 px-3 sm:px-6">
                         <div className="mx-auto mt-2 rounded-2xl border border-slate-800/80 bg-slate-900 p-3 shadow-2xl shadow-black/30 sm:mx-6">
+
+                            {/* Navigation Links */}
                             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                                 {NavbarLinkData.map((link) => (
                                     <a
                                         key={link.id}
                                         href={link.href}
-                                        className="flex items-center rounded-xl border border-slate-800 bg-slate-800/60 px-4 py-3.5 text-sm font-medium text-slate-300 transition-all duration-200 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
                                         onClick={() => setIsMenuOpen(false)}
+                                        className="flex items-center rounded-xl border border-slate-800 bg-slate-800/60 px-4 py-3.5 text-sm font-medium text-slate-300 transition-all duration-200 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
                                     >
                                         {link.name}
                                     </a>
                                 ))}
                             </div>
+
+                            {/* User Authentication Buttons */}
+                            <div className="mt-4 flex items-center gap-3 border-t border-slate-800 pt-4">
+                                <a
+                                    href="/login"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="flex flex-1 items-center justify-center rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 text-sm font-semibold text-slate-200 transition-all duration-200 hover:border-cyan-400/40 hover:bg-slate-800/80 hover:text-cyan-400"
+                                >
+                                    Login
+                                </a>
+
+                                <a
+                                    href="/signup"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="flex flex-1 items-center justify-center rounded-xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-slate-950 transition-all duration-200 hover:bg-cyan-300"
+                                >
+                                    Sign Up
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 )}
