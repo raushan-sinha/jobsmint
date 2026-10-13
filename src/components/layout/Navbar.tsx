@@ -1,3 +1,5 @@
+import { NavbarLinkData } from "../../data/navbarLinks.data";
+
 export default function Navbar() {
     return (
         <header className="fixed top-[2%] left-1/2 z-50 w-[90%] -translate-x-1/2">
@@ -29,27 +31,11 @@ export default function Navbar() {
 
                 {/* Navigation Links */}
                 <div className="flex items-center gap-8">
-                    <a href="/" className="text-sm font-semibold text-blue-600">
-                        Home
-                    </a>
-                    <a
-                        href="/jobs"
-                        className="text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
-                    >
-                        Jobs
-                    </a>
-                    <a
-                        href="/post-job"
-                        className="text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
-                    >
-                        Post a Job
-                    </a>
-                    <a
-                        href="/support"
-                        className="text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
-                    >
-                        Support
-                    </a>
+                    {NavbarLinkData.map((link) => (
+                        <a key={link.id} href={link.href} className="text-base font-semibold text-black-600">
+                            {link.name}
+                        </a>
+                    ))}
                 </div>
 
                 {/* Auth Buttons */}
