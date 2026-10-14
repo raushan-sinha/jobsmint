@@ -3,7 +3,7 @@ import { NavbarLinkData } from "../../data/navbarLinks.data";
 export default function Navbar() {
     return (
         <header className="fixed top-[2%] left-1/2 z-50 w-[90%] -translate-x-1/2">
-            <nav className="flex h-[76px] items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 shadow-lg shadow-slate-200/50 backdrop-blur-xl">
+            <nav className="flex h-[65px] items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 shadow-lg shadow-slate-400/50 backdrop-blur-xl">
 
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-3">
