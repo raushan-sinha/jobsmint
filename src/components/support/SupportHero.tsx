@@ -5,7 +5,7 @@ export default function SupportHero() {
             <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
             <div className="pointer-events-none absolute -right-24 top-20 h-80 w-80 rounded-full bg-cyan-100/50 blur-3xl" />
 
-            <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+            <div className="relative mx-auto flex min-h-130 max-w-7xl items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
                 <div className="grid w-full items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
                     {/* Left Content */}
@@ -17,7 +17,7 @@ export default function SupportHero() {
 
                         <h1 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                             How can we
-                            <span className="block bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                            <span className="block bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                                 help you?
                             </span>
                         </h1>
@@ -77,7 +77,7 @@ export default function SupportHero() {
 
                     {/* Right Support Card */}
                     <div className="relative mx-auto w-full max-w-md lg:ml-auto">
-                        <div className="relative rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-blue-50 p-6 shadow-xl shadow-slate-200/50 sm:p-8">
+                        <div className="relative rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-blue-50 p-6 shadow-xl shadow-slate-200/50 sm:p-8">
 
                             {/* Decorative Circle */}
                             <div className="absolute right-6 top-6 h-20 w-20 rounded-full bg-blue-100/70" />
