@@ -1,10 +1,12 @@
+import { useLocation } from "react-router-dom";
 import { NavbarLinkData } from "../../data/navbarLinks.data";
 
 export default function Navbar() {
+    const location = useLocation();
+
     return (
         <header className="fixed top-[2%] left-1/2 z-50 w-[90%] -translate-x-1/2">
             <nav className="flex h-16.25 items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 shadow-lg shadow-slate-400/50 backdrop-blur-xl">
-
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white">
@@ -17,8 +19,7 @@ export default function Navbar() {
                             stroke="currentColor"
                             strokeWidth="2"
                             strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
+                            strokeLinejoin="round">
                             <rect x="3" y="7" width="18" height="13" rx="2" />
                             <path d="M8 7V4h8v3M3 12h18M10 12v2h4v-2" />
                         </svg>
@@ -32,7 +33,10 @@ export default function Navbar() {
                 {/* Navigation Links */}
                 <div className="flex items-center gap-8">
                     {NavbarLinkData.map((link) => (
-                        <a key={link.id} href={link.href} className="relative text-base font-medium text-black transition-colors duration-200 hover:text-blue-600 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-linear-to-r after:from-cyan-800 after:to-blue-600 after:transition-all after:duration-300 after:ease-out hover:after:w-full">
+                        <a
+                            key={link.id}
+                            href={link.href}
+                            className={`${location.pathname === link.href ? "text-blue-600 font-semibold" : "text-slate-700 hover:text-blue-600"} transition-all `}>
                             {link.name}
                         </a>
                     ))}
@@ -42,18 +46,15 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <a
                         href="/login"
-                        className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all hover:border-blue-300 hover:text-blue-600"
-                    >
+                        className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all hover:border-blue-300 hover:text-blue-600">
                         Login
                     </a>
                     <a
                         href="/signup"
-                        className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-blue-700"
-                    >
+                        className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-blue-700">
                         Sign Up
                     </a>
                 </div>
-
             </nav>
         </header>
     );
