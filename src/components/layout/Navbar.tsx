@@ -3,7 +3,7 @@ import { NavbarLinkData } from "../../data/navbarLinks.data";
 export default function Navbar() {
     return (
         <header className="fixed top-[2%] left-1/2 z-50 w-[90%] -translate-x-1/2">
-            <nav className="flex h-[65px] items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 shadow-lg shadow-slate-400/50 backdrop-blur-xl">
+            <nav className="flex h-16.25 items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 shadow-lg shadow-slate-400/50 backdrop-blur-xl">
 
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-3">
@@ -32,7 +32,7 @@ export default function Navbar() {
                 {/* Navigation Links */}
                 <div className="flex items-center gap-8">
                     {NavbarLinkData.map((link) => (
-                        <a key={link.id} href={link.href} className="relative text-base font-medium text-black transition-colors duration-200 hover:text-blue-600 after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-800 after:to-blue-600 after:transition-all after:duration-300 after:ease-out hover:after:w-full">
+                        <a key={link.id} href={link.href} className="relative text-base font-medium text-black transition-colors duration-200 hover:text-blue-600 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-linear-to-r after:from-cyan-800 after:to-blue-600 after:transition-all after:duration-300 after:ease-out hover:after:w-full">
                             {link.name}
                         </a>
                     ))}
