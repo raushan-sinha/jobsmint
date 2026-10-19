@@ -1,9 +1,11 @@
 import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import { NavbarLinkData } from "../../data/navbarLinks.data";
+import { useLocation } from "react-router-dom";
 
 export default function MobileNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const location = useLocation();
 
     return (
         <header className="fixed left-1/2 top-[2%] z-50 w-[90%] -translate-x-1/2 lg:hidden">
@@ -59,7 +61,7 @@ export default function MobileNavbar() {
                                         key={link.id}
                                         href={link.href}
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="flex items-center rounded-xl border border-slate-800 bg-slate-800/60 px-4 py-3.5 text-sm font-medium text-slate-300 transition-all duration-200 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
+                                        className={`${location.pathname === link.href ? "text-blue-600 font-semibold" : "text-white hover:text-blue-600"} transition-all `}
                                     >
                                         {link.name}
                                     </a>
