@@ -16,7 +16,7 @@ const Skills: SkillsProps[] = [
 export default function HeroSection() {
     return (
         <section className="relative overflow-hidden bg-slate-950 px-6 py-20 text-white lg:px-8 lg:py-28">
-            <div className="absolute left-1/2 top-0 -z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
+            <div className="absolute left-1/2 top-0 z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
 
             <div className="relative z-10 mx-auto max-w-6xl text-center">
                 <div className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300">
@@ -67,7 +67,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
-                    <span className="text-slate-500">Popular:</span>
+                    <span className="text-slate-300">Popular:</span>
 
                     {Skills.map((skill) => (
                         <button
