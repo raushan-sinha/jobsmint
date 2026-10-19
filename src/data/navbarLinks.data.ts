@@ -4,5 +4,4 @@ export const NavbarLinkData: NavbarLinkProps[] = [
     { id: 1, href: '/', name: 'Home' },
     { id: 2, href: '/jobs', name: 'Jobs' },
     { id: 3, href: '/post-job', name: 'Post a Job' },
-    { id: 4, href: '/support', name: 'Support' },
 ]
