@@ -1,19 +1,26 @@
 import { ArrowRight, BriefcaseBusiness, MapPin, Search } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 interface SkillsProps {
-    id: number,
-    name: string
+    id: number;
+    name: string;
 }
 
 const Skills: SkillsProps[] = [
-    { id: 1, name: 'React' },
-    { id: 2, name: 'Next.js' },
-    { id: 3, name: 'Python' },
-    { id: 4, name: 'TypeScript' },
-]
-
+    { id: 1, name: "React" },
+    { id: 2, name: "Next.js" },
+    { id: 3, name: "Python" },
+    { id: 4, name: "TypeScript" },
+];
 
 export default function HeroSection() {
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    // Focus the input field when the page load -
+    useEffect(() => {
+        inputRef.current.focus();
+    })
+
     return (
         <section className="relative overflow-hidden bg-slate-950 px-6 py-20 text-white lg:px-8 lg:py-28">
             <div className="absolute left-1/2 top-0 z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
@@ -25,14 +32,12 @@ export default function HeroSection() {
                 </div>
 
                 <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    Find Your Next{" "}
-                    <span className="text-blue-400">Opportunity.</span>
+                    Find Your Next <span className="text-blue-400">Opportunity.</span>
                 </h1>
 
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
-                    Search thousands of job opportunities, discover roles
-                    that match your skills, or create a job post and connect
-                    with talented professionals.
+                    Search thousands of job opportunities, discover roles that match your
+                    skills, or create a job post and connect with talented professionals.
                 </p>
 
                 <div className="mx-auto mt-10 grid max-w-4xl gap-3 rounded-2xl border border-slate-800 bg-slate-900 p-3 shadow-2xl md:grid-cols-[1fr_1fr_auto]">
@@ -41,6 +46,7 @@ export default function HeroSection() {
 
                         <input
                             type="text"
+                            ref={inputRef}
                             id="skill"
                             name="skill"
                             placeholder="Job title, skill or keyword"
@@ -72,12 +78,10 @@ export default function HeroSection() {
                     {Skills.map((skill) => (
                         <button
                             key={skill.id}
-                            className="rounded-full border border-slate-800 px-3 py-1.5 text-slate-400 transition hover:border-blue-500/50 hover:text-blue-400 cursor-pointer"
-                        >
+                            className="rounded-full border border-slate-800 px-3 py-1.5 text-slate-400 transition hover:border-blue-500/50 hover:text-blue-400 cursor-pointer">
                             {skill.name}
                         </button>
-                    )
-                    )}
+                    ))}
                 </div>
 
                 <div className="mt-10">
@@ -88,5 +92,5 @@ export default function HeroSection() {
                 </div>
             </div>
         </section>
-    )
+    );
 }
