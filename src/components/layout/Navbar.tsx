@@ -36,7 +36,7 @@ export default function Navbar() {
                         <a
                             key={link.id}
                             href={link.href}
-                            className={`${location.pathname === link.href ? "text-blue-600 font-semibold" : "text-slate-700 hover:text-blue-600"} transition-all `}>
+                            className={`relative ${location.pathname === link.href ? "text-blue-600 font-semibold" : "text-slate-700 hover:text-blue-600"} transition-all after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-blue-600 after:transition-transform after:duration-300 hover:after:scale-x-100 ${location.pathname === link.href ? "after:scale-x-100" : ""}`}>
                             {link.name}
                         </a>
                     ))}
@@ -59,3 +59,4 @@ export default function Navbar() {
         </header>
     );
 }
+
