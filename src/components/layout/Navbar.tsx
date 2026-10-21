@@ -46,7 +46,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <a
                         href="/login"
-                        className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all hover:border-blue-300 hover:text-blue-600">
+                        className="rounded-xl border border-slate-800 bg-slate-800 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-slate-900">
                         Login
                     </a>
                     <a
