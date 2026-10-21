@@ -40,7 +40,7 @@ export default function HeroSection() {
                     skills, or create a job post and connect with talented professionals.
                 </p>
 
-                <div className="mx-auto mt-10 grid max-w-4xl gap-3 rounded-2xl border border-slate-800 bg-slate-900 p-3 shadow-2xl md:grid-cols-[1fr_1fr_auto]">
+                <div className="mx-auto mt-10 grid max-w-4xl gap-3 rounded-2xl border border-slate-800 bg-slate-700 p-3 shadow-2xl md:grid-cols-[1fr_1fr_auto]">
                     <div className="flex items-center gap-3 rounded-xl bg-slate-800 px-4 py-3">
                         <Search className="text-slate-400" size={20} />
 
