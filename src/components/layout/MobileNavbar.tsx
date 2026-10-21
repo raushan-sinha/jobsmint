@@ -52,16 +52,16 @@ export default function MobileNavbar() {
                 {/* Navigation Links */}
                 {isMenuOpen && (
                     <div className="absolute left-0 right-0 top-full z-40 px-3 sm:px-6">
-                        <div className="mx-auto mt-2 rounded-2xl border border-slate-800/80 bg-slate-900 p-3 shadow-2xl shadow-black/30 sm:mx-6">
+                        <div className="mx-auto mt-2 rounded-2xl border border-slate-800/80 bg-white p-3 shadow-2xl shadow-black/30 sm:mx-6">
 
                             {/* Navigation Links */}
-                            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                                 {NavbarLinkData.map((link) => (
                                     <a
                                         key={link.id}
                                         href={link.href}
                                         onClick={() => setIsMenuOpen(false)}
-                                        className={`${location.pathname === link.href ? "text-blue-600 font-semibold" : "text-white hover:text-blue-600"} transition-all `}
+                                        className={`${location.pathname === link.href ? "text-blue-600 font-semibold" : "text-black hover:text-blue-600"} transition-all `}
                                     >
                                         {link.name}
                                     </a>
