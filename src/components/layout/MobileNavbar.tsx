@@ -9,7 +9,7 @@ export default function MobileNavbar() {
 
     return (
         <header className="fixed left-1/2 top-[2%] z-50 w-[90%] -translate-x-1/2 lg:hidden">
-            <nav className="flex h-12.5 items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-4 shadow-lg shadow-slate-400/50 backdrop-blur-xl sm:h-19 sm:px-6">
+            <nav className="flex h-14 items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-4 shadow-lg shadow-slate-400/50 backdrop-blur-xl sm:h-19 sm:px-6">
 
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-2.5">
