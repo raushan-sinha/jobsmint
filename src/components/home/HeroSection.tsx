@@ -26,14 +26,14 @@ export default function HeroSection() {
             <div className="absolute left-1/2 top-0 z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
 
             <div className="relative z-10 mx-auto max-w-6xl text-center">
-                <div className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300">
+                <div className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300">
                     <BriefcaseBusiness size={16} />
                     Discover your next opportunity
                 </div>
 
-                <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                {/* <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                     Find Your Next <span className="text-blue-400">Opportunity.</span>
-                </h1>
+                </h1> */}
 
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
                     Search thousands of job opportunities, discover roles that match your
