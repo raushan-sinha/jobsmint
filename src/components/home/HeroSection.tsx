@@ -1,16 +1,17 @@
 import { ArrowRight, BriefcaseBusiness, MapPin, Search } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-interface SkillsProps {
+interface JobsProps {
     id: number;
     name: string;
 }
 
-const Skills: SkillsProps[] = [
-    { id: 1, name: "React" },
-    { id: 2, name: "Next.js" },
-    { id: 3, name: "Python" },
-    { id: 4, name: "TypeScript" },
+const PopularJobs: JobsProps[] = [
+    { id: 1, name: "Full-stack Engineer" },
+    { id: 2, name: "AI Engineer" },
+    { id: 3, name: "ML Engineer" },
+    { id: 4, name: "DevOps Engineer" },
+    { id: 5, name: "CyberSecurity Engineer" },
 ];
 
 export default function HeroSection() {
@@ -75,11 +76,11 @@ export default function HeroSection() {
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
                     <span className="text-slate-300">Popular:</span>
 
-                    {Skills.map((skill) => (
+                    {PopularJobs.map((job) => (
                         <button
-                            key={skill.id}
+                            key={job.id}
                             className="rounded-full border border-slate-800 px-3 py-1.5 text-slate-400 transition hover:border-blue-500/50 hover:text-blue-400 cursor-pointer">
-                            {skill.name}
+                            {job.name}
                         </button>
                     ))}
                 </div>
