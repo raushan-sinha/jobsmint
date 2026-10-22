@@ -6,7 +6,7 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-[2%] left-1/2 z-50 w-[90%] -translate-x-1/2">
-            <nav className="flex h-16.25 items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 shadow-lg shadow-slate-400/50 backdrop-blur-xl">
+            <nav className="flex h-16.25 items-center justify-between rounded-2xl border border-slate-200 bg-white/95 px-8 backdrop-blur-xl">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white">
