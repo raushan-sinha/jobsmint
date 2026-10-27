@@ -23,7 +23,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative overflow-hidden bg-black px-6 py-20 text-white lg:px-8 lg:py-28">
+        <section className="relative overflow-hidden bg-black px-6 py-20 text-white lg:px-8 lg:py-28 min-h-screen">
             <div className="absolute left-1/2 top-0 z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
 
             <div className="relative z-10 mx-auto max-w-6xl text-center">
