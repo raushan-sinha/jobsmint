@@ -1,9 +1,10 @@
 
 import { useEffect, useState } from "react";
+import type { JobDataProps } from "../types/job.types";
 import { getJobs } from "../server/jobServer.server";
 
 export default function Jobs() {
-    const [jobDetail, setJobDetail] = useState([]);
+    const [jobDetail, setJobDetail] = useState<JobDataProps[]>([]);
 
     useEffect(() => {
         const fetchJobApi = async () => {
