@@ -1,24 +1,15 @@
 
 import { useEffect, useState } from "react";
-import type { JobDataProps } from "../types/job.types";
+import { getJobs } from "../server/jobServer.server";
 
 export default function Jobs() {
-    const [jobDetail, setJobDetail] = useState<JobDataProps[]>([]);
+    const [jobDetail, setJobDetail] = useState([]);
 
     useEffect(() => {
         const fetchJobApi = async () => {
             try {
-                const apiUrl = import.meta.env.VITE_JOBS_BASE_API_URL;
-
-                const response = await fetch(`${apiUrl}/api/jobs`);
-
-                if (!response.ok) {
-                    throw new Error("Jobs API isn't responding");
-                }
-
-                const data = await response.json();
-
-                setJobDetail(data.jobs);
+                const apiResponse = await getJobs();
+                setJobDetail(apiResponse);
             } catch (error) {
                 console.error('Error', error)
             }
