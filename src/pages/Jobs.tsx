@@ -29,9 +29,11 @@ export default function Jobs() {
             <section aria-label="Latest Technology News" className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
                 {isLoading ? (
                     <div className="col-span-full flex flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 py-16 text-center backdrop-blur-xl">
-                        <div className="text-5xl">
-                            🔍
-                        </div>
+                        <div
+                            className="mx-auto h-[1em] w-[1em] animate-spin rounded-full border-4 border-slate-200 border-t-blue-600"
+                            role="status"
+                            aria-label="Loading jobs"
+                        />
 
                         <h3 className="mt-5 text-2xl font-bold text-black">
                             Loading...
