@@ -85,7 +85,14 @@ export default function HeroSection() {
                     ))}
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+                    <button
+                        className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer"
+                    >
+                        Explore Jobs
+                        <ArrowRight size={20} />
+                    </button>
+
                     <button className="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition hover:text-blue-300 cursor-pointer">
                         Looking to hire? Post a Job
                         <ArrowRight size={16} />
