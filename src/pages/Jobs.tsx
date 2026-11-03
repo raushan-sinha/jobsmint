@@ -5,7 +5,7 @@ import { getJobs } from "../server/jobServer.server";
 import JobCard from "../components/ui/JobCard";
 
 export default function Jobs() {
-    const [jobDetail, setJobDetail] = useState<JobDataProps[]>([]);
+    const [jobDetail, setJobDetail] = useState<JobDataProps[]>([]);    // state to store the job details
 
     useEffect(() => {
         const fetchJobApi = async () => {
