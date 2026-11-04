@@ -7,6 +7,7 @@ import JobCard from "../components/ui/JobCard";
 export default function Jobs() {
     const [jobDetail, setJobDetail] = useState<JobDataProps[]>([]);    // state to store the job details
     const [isLoading, setIsLoading] = useState<boolean>(false); // state to store the loading state
+    const [error, setError] = useState<string>(''); // state to store the error message
 
     useEffect(() => {
         const fetchJobApi = async () => {
@@ -15,7 +16,7 @@ export default function Jobs() {
                 const apiResponse = await getJobs();
                 setJobDetail(apiResponse);
             } catch (error) {
-                console.error('Error', error)
+                setError('Error fetching jobs');
             } finally {
                 setIsLoading(false);
             }
@@ -37,6 +38,12 @@ export default function Jobs() {
 
                         <h3 className="mt-5 text-2xl font-bold text-black">
                             Loading...
+                        </h3>
+                    </div>
+                ) : error ? (
+                    <div className="col-span-full flex flex-col items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 py-16 text-center backdrop-blur-xl">
+                        <h3 className="mt-5 text-2xl font-bold text-black">
+                            {error}
                         </h3>
                     </div>
                 ) : (
