@@ -1,5 +1,6 @@
 import { ArrowRight, BriefcaseBusiness, MapPin, Search } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface JobsProps {
     id: number;
@@ -21,6 +22,9 @@ export default function HeroSection() {
     useEffect(() => {
         inputRef.current?.focus();
     }, []);
+
+    // Job Page Navigate -
+    const navigate = useNavigate();
 
     return (
         <section className="relative overflow-hidden bg-black px-6 py-20 text-white lg:px-8 lg:py-28 min-h-screen">
@@ -88,6 +92,7 @@ export default function HeroSection() {
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
                     <button
                         className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer"
+                        onClick={() => navigate('/jobs')}
                     >
                         Explore Jobs
                         <ArrowRight size={20} />
