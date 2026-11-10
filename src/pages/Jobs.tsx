@@ -46,7 +46,7 @@ export default function Jobs() {
                     </div>
                 ) : (
                     <>
-                        <header className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+                        <header className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between mt-10">
                             <h1 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl">
                                 {jobDetail.length} {jobDetail.length === 1 ? "job" : "jobs"} found
                             </h1>
