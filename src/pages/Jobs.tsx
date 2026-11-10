@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import type { JobDataProps } from "../types/job.types";
 import { getJobs } from "../server/jobServer.server";
@@ -21,7 +20,6 @@ export default function Jobs() {
                 setIsLoading(false);
             }
         };
-
         fetchJobApi();
     }, []);
 
